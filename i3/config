@@ -165,4 +165,9 @@ bar {
 }
 
 
-bindsym $mod+p exec --no-startup-id gnome-terminal --working-directory=$HOME/Repos/gstk-backend # --command='sh -c "mkdir /tmp/ptimo; exec bash"'
+#-----------------#
+# Jaume Settings  #
+#-----------------#
+
+# It opens a terminal in the concrete directory, it should enable the enviroment, but for the moment it does not work
+bindsym $mod+shift+Return exec --no-startup-id gnome-terminal --working-directory=$HOME/Repos/gstk-backend # --command='sh -c "source $HOME/Repos/gstk-backend/env/bin/activate; exec bash"'
