@@ -19,3 +19,8 @@ Once installed, you have to logout, and when you login, select the i3 desktop en
 After entering the desktop environment for the first time, you will receive a notification if you want to create a configuration. Accept and select the $Mod key you want. 
 Then, clone this repository in **$HOME/.config** and press **$Mod+shift+r**.
 
+### Prerequisites
+
+```
+sudo apt-get install wmctrl
+```
