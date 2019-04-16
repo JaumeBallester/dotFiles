@@ -14,9 +14,9 @@ apps=(
 
 # Which workspace to assign your wanted App :
 workspaces=(
- "4: Internet"
- "1: Editor"
- "5: Git"
+ "4: Internet "
+ "1: Editor  "
+ "5: Git  "
 )
 
 # counter of opened windows
