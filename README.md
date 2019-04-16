@@ -24,3 +24,17 @@ Then, clone this repository in **$HOME/.config** and press **$Mod+shift+r**.
 ```
 sudo apt-get install wmctrl
 ```
+
+#### Programs I use
+This is my own configuration, so when I boot, I want my programs to appear. The programs that i have configured are:
+```
+# Visual Studio Code
+snap install code 
+
+# GitKraken
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+dpkg -i gitkraken-amd64.deb
+
+# Firefox
+sudo apt install firefox
+```
