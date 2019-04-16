@@ -25,6 +25,15 @@ Then, clone this repository in **$HOME/.config** and press **$Mod+shift+r**.
 sudo apt-get install wmctrl
 ```
 
+#### Multiple Monitors
+To configure multiple monitors, i recomend using arandr, to install:
+
+```
+sudo apt-get install arandr
+```
+Once installed open it with the dmenu, and configure the monitors as you want. After making your changes, Apply them to visualize the effect that they are going to have on your system. If you are happy with them, replace the file $HOME/.config/i3/monitors.sh.
+
+
 #### Programs I use
 This is my own configuration, so when I boot, I want my programs to appear. The programs that i have configured are:
 ```
@@ -38,3 +47,4 @@ dpkg -i gitkraken-amd64.deb
 # Firefox
 sudo apt install firefox
 ```
+
