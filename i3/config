@@ -177,6 +177,9 @@ bindsym $mod+shift+Return exec --no-startup-id gnome-terminal --working-director
 
 # Opens some things when the program is open:
 
-exec --no-startup-id i3-msg 'workspace $workspace1; exec /snap/bin/code'
-exec --no-startup-id i3-msg 'workspace $workspace4; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace $workspace5; exec /usr/bin/gitkraken'
+#exec --no-startup-id i3-msg 'workspace $workspace1; exec /snap/bin/code'
+#exec --no-startup-id i3-msg 'workspace $workspace4; exec /usr/bin/firefox'
+#exec --no-startup-id i3-msg 'workspace $workspace5; exec /usr/bin/gitkraken'
+
+exec --no-startup-id $HOME/.config/i3/launcher.sh
+
