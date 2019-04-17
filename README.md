@@ -59,4 +59,7 @@ dpkg -i gitkraken-amd64.deb
 ```
 sudo apt install firefox
 ```
-
+##### **Spotify**
+```
+sudo snap install spotify
+```
