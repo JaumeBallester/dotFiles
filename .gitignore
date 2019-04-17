@@ -1,0 +1,7 @@
+/*
+/*/
+!/i3/
+!/fonts/
+!.gitignore
+*.swo
+*.swp
