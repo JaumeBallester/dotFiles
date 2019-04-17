@@ -92,18 +92,20 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1: Editor "
+set $workspace1 "1: Editor " 
 set $workspace2 "2: Terminals "
-set $workspace3 "3: Server "
+set $workspace3 "3: Server " 
 set $workspace4 "4: Internet "
 set $workspace5 "5: Git "
+
+
 # switch to workspace
 
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace $workspace5
+bindsym $mod+1 workspace $workspace1 
+bindsym $mod+2 workspace $workspace2 
+bindsym $mod+3 workspace $workspace3 
+bindsym $mod+4 workspace $workspace4 
+bindsym $mod+5 workspace $workspace5 
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -175,11 +177,15 @@ bindsym $mod+shift+Return exec --no-startup-id gnome-terminal --working-director
 # assign [class="Firefox"] $workspace4
 
 # Configure monitors
-
 exec --no-startup-id $HOME/.config/i3/monitors.sh
 
 
+# Force workspace on a concrete molnitor:
+workspace $workspace1 output DP-1
+workspace $workspace2 output HDMI-1
+workspace $workspace3 output HDMI-1
+workspace $workspace4 output HDMI-1
+workspace $workspace5 output HDMI-1
+
 # Opens some things when we boot up is open:
 exec --no-startup-id $HOME/.config/i3/launcher.sh
-
-

@@ -7,7 +7,7 @@
 apps=(
  	
  "/usr/bin/firefox"
- "code"
+ "/user/bin/code"
  "/usr/bin/gitkraken" #git kraken sould be the last one because it needs a lot of time to boot
  
 )
