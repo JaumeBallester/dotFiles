@@ -26,7 +26,16 @@ sudo apt-get install wmctrl
 ##### Add this Configuration
 
 After entering the desktop environment for the first time, you will receive a notification if you want to create a configuration. Accept and select the $Mod key you want. 
-Then, clone this repository in **$HOME/.config** and press **$Mod+shift+r**.
+```
+cd $HOME/.config
+git init
+git remote add origin https://github.com/JaumeBallester/LinuxConfigs.git
+git fetch
+git reset origin/master 
+git checkout -t origin/master
+```
+
+And press **$Mod+shift+r**.
 
 ##### Fonts
 I used some non standar [fonts](https://fontawesome.com/cheatsheet?from=io) so i could add some icons to the UI. This fonts are included in the repo. For installing the fonts, use the simple command:
