@@ -7,16 +7,18 @@
 apps=(
  	
  "/usr/bin/firefox"
- "/user/bin/code"
+ "code"
+ "spotify"
  "/usr/bin/gitkraken" #git kraken sould be the last one because it needs a lot of time to boot
  
 )
 
 # Which workspace to assign your wanted App :
 workspaces=(
- "4: Internet "
- "1: Editor  "
- "5: Git  "
+ "4: Internet  "
+ "1:  Editor   "
+ "6:   Music   "
+ "5:    Git    "
 )
 
 # counter of opened windows
