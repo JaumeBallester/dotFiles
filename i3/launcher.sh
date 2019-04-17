@@ -13,6 +13,14 @@ apps=(
  
 )
 
+#set $nworkspace1 "1:  Editor   " 
+#set $nworkspace2 "2: Terminals "
+#set $nworkspace3 "3:  Server   " 
+#set $nworkspace4 "4: Internet  "
+#set $nworkspace5 "5:    Git    "
+#set $nworkspace6 "6:   Music   "
+
+
 # Which workspace to assign your wanted App :
 workspaces=(
  "4: Internet  "
@@ -33,7 +41,6 @@ do
 
     i3-msg workspace ${workspaces[$iwin]} # move in wanted workspace
     ${apps[$iwin]} & # start the wanted app
-    sleep 1
 done
 
 ####### ABSOLUTELY OPTIONAL ########
