@@ -96,7 +96,7 @@ set $workspace1 "1: Editor "
 set $workspace2 "2: Terminals "
 set $workspace3 "3: Server " 
 set $workspace4 "4: Internet "
-set $workspace5 "5: Git "
+set $workspace5 "5: Git "
 
 
 # switch to workspace
