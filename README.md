@@ -20,6 +20,7 @@ Once installed, you have to logout, and when you login, select the i3 desktop en
 
 ```
 sudo apt-get install wmctrl
+sudo apt-get install scrot
 ```
 
 

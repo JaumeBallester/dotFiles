@@ -1,5 +1,11 @@
 #!/bin/bash
 
-#takes a screenshot, blurs it, and adds the png above
+#takes a screenshot, pixelate it, and adds the png above
 
-i3lock -i <(import -silent -window root png:- | mogrify -blur 0x8 png:- | composite -gravity Center  $HOME/.config/i3/Rick.png png:- png:-)
+ICON=$HOME/.config/i3/lock.png
+TMPBG=/tmp/screen.png
+scrot /tmp/screen.png
+convert $TMPBG -scale 10% -scale 1000% $TMPBG
+convert $TMPBG $ICON -gravity center -composite -matte $TMPBG
+
+i3lock -u -i $TMPBG
