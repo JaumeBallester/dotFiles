@@ -43,9 +43,6 @@ do
     ${apps[$iwin]} & # start the wanted app
 done
 
-####### ABSOLUTELY OPTIONAL ########
-## inject message(s) into terminal (first one created : /dev/pts/0)
-
 # wait a moment
 sleep 4 
 
