@@ -161,7 +161,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks
 }
 
 
@@ -207,3 +207,26 @@ bindsym $mod+BackSpace exec $HOME/.config/i3/lockscreen.sh
 
 # Opens some things when we boot up is open:
 exec --no-startup-id $HOME/.config/i3/launcher.sh
+
+
+
+set $bg-color 	         #2f343fee
+set $inactive-bg-color   #2f343fee
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+#bb <- Good transparency (disabled because of black borders on GTK windows)
+set $boract              #268bd2
+#50
+set $boroff              #2f343f
+#90
+set $indcol              #93c7eb
+
+# window colors
+#                       border              background         text                 indicator
+client.focused          $boract             $boract            $text-color          $indcol
+client.unfocused        $boroff	            $boroff            $inactive-text-color $boroff
+client.focused_inactive $boroff             $boroff            $inactive-text-color $boroff
+client.urgent $urgent-bg-color $urgent-bg-color $text-color $indcol
+
