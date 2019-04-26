@@ -188,7 +188,7 @@ assign [class="GitKraken"] $workspace5
 assign [class="Spotify"] $workspace6
 
 # It opens a terminal in the concrete directory, it should enable the enviroment, but for the moment it does not work
-bindsym $mod+shift+Return exec --no-startup-id gnome-terminal --working-directory=$HOME/Repos/gstk-backend -e 'bash --rcfile $HOME/Repos/gstk-backend/env/bin/activate'
+bindsym $mod+shift+Return exec --no-startup-id gnome-terminal --working-directory=$HOME/REPOS/gstk-backend -e 'bash --rcfile $HOME/Repos/gstk-backend/env/bin/activate'
 
 # Configure monitors
 exec --no-startup-id $HOME/.config/i3/monitors.sh
