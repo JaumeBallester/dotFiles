@@ -198,11 +198,11 @@ exec --no-startup-id $HOME/.config/i3/monitors.sh
 bindsym $mod+BackSpace exec $HOME/.config/i3/lockscreen.sh
 
 ## Force workspace on a concrete molnitor:
-#workspace $workspace1 output DP-1
-#workspace $workspace2 output HDMI-1
-#workspace $workspace3 output HDMI-1
-#workspace $workspace4 output HDMI-1
-#workspace $workspace5 output HDMI-1
+workspace $workspace1 output HDMI-1
+workspace $workspace2 output DP-1
+workspace $workspace3 output DP-1
+workspace $workspace4 output DP-1
+workspace $workspace5 output DP-1
 
 
 # Opens some things when we boot up is open:
