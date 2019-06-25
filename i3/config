@@ -37,6 +37,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec lighthouse | sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -188,7 +189,7 @@ assign [class="GitKraken"] $workspace5
 assign [class="Spotify"] $workspace6
 
 # It opens a terminal in the concrete directory, it should enable the enviroment, but for the moment it does not work
-bindsym $mod+shift+Return exec --no-startup-id gnome-terminal --working-directory=$HOME/REPOS/gstk-backend -e 'bash --rcfile $HOME/Repos/gstk-backend/env/bin/activate'
+bindsym $mod+shift+Return exec --no-startup-id gnome-terminal --working-directory=$HOME/Repos/gstk-backend -e "bash -c \" bash source $HOME/Repos/gstk-backend/env/bin/activate \""
 
 # Configure monitors
 exec --no-startup-id $HOME/.config/i3/monitors.sh
@@ -198,11 +199,11 @@ exec --no-startup-id $HOME/.config/i3/monitors.sh
 bindsym $mod+BackSpace exec $HOME/.config/i3/lockscreen.sh
 
 ## Force workspace on a concrete molnitor:
-#workspace $workspace1 output DP-1
-#workspace $workspace2 output HDMI-1
-#workspace $workspace3 output HDMI-1
-#workspace $workspace4 output HDMI-1
-#workspace $workspace5 output HDMI-1
+workspace $workspace1 output DP-1
+workspace $workspace2 output HDMI-1
+workspace $workspace3 output HDMI-1
+workspace $workspace4 output HDMI-1
+workspace $workspace5 output HDMI-1
 
 
 # Opens some things when we boot up is open:
@@ -217,11 +218,11 @@ set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 #bb <- Good transparency (disabled because of black borders on GTK windows)
-set $boract              #268bd2
+set $boract              #fc5050
 #50
 set $boroff              #2f343f
 #90
-set $indcol              #93c7eb
+set $indcol              #fc5050
 
 # window colors
 #                       border              background         text                 indicator
@@ -230,3 +231,6 @@ client.unfocused        $boroff	            $boroff            $inactive-text-co
 client.focused_inactive $boroff             $boroff            $inactive-text-color $boroff
 client.urgent $urgent-bg-color $urgent-bg-color $text-color $indcol
 
+
+# set keyboard layout
+exec "setxkbmap -layout gb"
