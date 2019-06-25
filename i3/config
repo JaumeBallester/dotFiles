@@ -176,11 +176,21 @@ mode "player" {
         bindsym Down  exec --no-startup-id pactl set-sink-volume 0 -5%
         bindsym  Up   exec --no-startup-id pactl set-sink-volume 0 +5%
         bindsym space exec --no-startup-id pactl set-sink-mute   0 toggle
+        #bindsym   $mod+p   exec --no-startup-id gnome-terminal dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-bindsym $mod+p mode "player"
+#bindsym $mod+p mode "player"
+#Spotify Controls
+bindsym  $mod + p     exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause #Play/Pause
+bindsym  $mod + control + Down  exec --no-startup-id amixer set 'Master' 5%- # Sound Down
+bindsym  $mod + control + Up    exec --no-startup-id amixer set 'Master' 5%+ # Sound Up
+bindsym  $mod + control + Left  exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous # Previous Song
+bindsym  $mod + control + Right  exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next # Next song
+
+# Screenshoots
+bindsym $mod + Print exec --no-startup-id /usr/bin/flameshot gui
 
 # Forces code or Firefox to open on a concrete workspace
 assign [class="Code"] $workspace1
@@ -198,11 +208,11 @@ exec --no-startup-id $HOME/.config/i3/monitors.sh
 bindsym $mod+BackSpace exec $HOME/.config/i3/lockscreen.sh
 
 ## Force workspace on a concrete molnitor:
-workspace $workspace1 output HDMI-1
-workspace $workspace2 output DP-1
-workspace $workspace3 output DP-1
-workspace $workspace4 output DP-1
-workspace $workspace5 output DP-1
+workspace $workspace1 output DP-1
+workspace $workspace2 output HDMI-1
+workspace $workspace3 output HDMI-1
+workspace $workspace4 output HDMI-1
+workspace $workspace5 output HDMI-1
 
 
 # Opens some things when we boot up is open:
@@ -210,23 +220,32 @@ exec --no-startup-id $HOME/.config/i3/launcher.sh
 
 
 
-set $bg-color 	         #2f343fee
-set $inactive-bg-color   #2f343fee
-set $text-color          #f3f4f5
+set $bg-color 	         #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #000000
 set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set $urgent-bg-color     #a03421
 
 #bb <- Good transparency (disabled because of black borders on GTK windows)
-set $boract              #268bd2
+set $boract              #824242
 #50
 set $boroff              #2f343f
 #90
 set $indcol              #93c7eb
 
 # window colors
-#                       border              background         text                 indicator
-client.focused          $boract             $boract            $text-color          $indcol
-client.unfocused        $boroff	            $boroff            $inactive-text-color $boroff
+#                       border              background         text                 indicator	   child border
+#client.focused          $boract             $boract            $text-color          $indcol
+#client.unfocused        $boroff	            $boroff            $inactive-text-color $boroff
+client.focused          #4C2727 	    #824242	       #E0E0E0 		    #2E9EF4	   #285577
+client.unfocused        #4C4C4C		    #262626 	       #7F7F7F 		    #292D2E	   #222222
 client.focused_inactive $boroff             $boroff            $inactive-text-color $boroff
-client.urgent $urgent-bg-color $urgent-bg-color $text-color $indcol
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indcol
 
+# Set Wallpaper
+#exec --no-startup-id feh --bg-scale '$HOME/Pictures/kevin-laminto-717486-unsplash (copy).jpg'
+#feh --bg-fill ~/Pictures/kevin-laminto-717486-unsplash\ \(copy\).jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/kevin-laminto-717486-unsplash\ \(copy\).jpg
+
+# Set keyboard layout
+exec "setxkbmap -layout us"
